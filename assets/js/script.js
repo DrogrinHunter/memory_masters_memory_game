@@ -115,6 +115,14 @@ const resetGuesses = () => {
     })
 }
 
+// move counter
+let moves = 0;
+let counter = document.querySelector('.moves');
+function moveCounter() {
+    moves++;
+    counter.innerHTML = moves + ' moves';
+}
+
 // event listener for when a card is selected 
 grid.addEventListener('click', function(event){ 
     const clicked = event.target;
@@ -131,7 +139,7 @@ grid.addEventListener('click', function(event){
 
     if (count < 2 ) {
         count++;
-
+        moveCounter();
         if (count === 1) {
             firstGuess = clicked.parentNode.dataset.name;
             console.log(firstGuess);
