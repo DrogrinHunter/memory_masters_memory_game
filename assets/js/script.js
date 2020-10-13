@@ -52,6 +52,9 @@ const cardsArray = [
 // duplicating 2 sets of cards 
 let gameGrid = cardsArray.concat(cardsArray);
 
+//randomising card order
+gameGrid.sort(() => 0.5 - Math.random());
+
 // inputting the cards into the dom 
 const game = document.getElementById('game');
 
@@ -71,4 +74,5 @@ gameGrid.forEach((item) => {
 
     grid.appendChild(card)
 })
+
 
