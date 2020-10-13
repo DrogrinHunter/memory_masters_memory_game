@@ -64,7 +64,8 @@ let firstGuess = ''
 let secondGuess = ''
 let count = 0;
 let previousTarget = null;
-let delay = 1200
+let delay = 1200;
+let timerOn = false
 
 // inputting the cards into the dom 
 const game = document.getElementById('game');
@@ -108,6 +109,7 @@ const resetGuesses = () => {
     secondGuess = '';
     count = 0;
     previousTarget = null;
+    
 
     let selected = document.querySelectorAll('.selected')
     selected.forEach(card => {
@@ -123,9 +125,31 @@ function moveCounter() {
     counter.innerHTML = moves + ' moves';
 }
 
+// timer 
+let time = 0;
+let timer;
+
+function startTimer() {
+    timer = setInterval(function() {
+        time++;
+        minutes = ('0' + Math.floor(time / 60)).slice(-2);
+        seconds = ('0' + time % 60).slice(-2);
+        document.querySelector('.timer').innerHTML = minutes + ':' + seconds;
+    }, 1000);
+}
+
+
+
 // event listener for when a card is selected 
 grid.addEventListener('click', function(event){ 
     const clicked = event.target;
+    
+    //starting the timer on the first click
+    if (timerOn === false) {
+        startTimer();
+        timerOn = true
+    }
+    
     if (
     clicked.nodeName === 'SECTION' || 
     clicked === previousTarget || 
