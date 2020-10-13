@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Ranchers&display=swap');
+
+
 *,
 *::before,
 *::after {
@@ -40,7 +43,7 @@ body {
 
 .front {
     z-index: 2;
-    background: black url('../images/card_background.jpg') no-repeat center center / contain;
+    background: black url('../images/background.jpg') no-repeat center center / contain;
 }
 
 .back {
@@ -57,4 +60,19 @@ body {
 
 .match .front {
     background: white !important;
+}
+
+/* Jumbotron */
+.jumbotron {
+    background-color: white;
+    padding: 0px;
+}
+.title-main {
+    font-family: "Ranchers", sans-serif;
+    text-align: center;
+}
+
+.title-para {
+    font-family: "Raleway", sans-serif;
+    text-align: center;
 }
