@@ -153,3 +153,7 @@ grid.addEventListener('click', function(event){
 
 });
 
+//restarting the game
+function restartGame() {
+    window.location.reload();
+}

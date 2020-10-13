@@ -75,4 +75,28 @@ body {
 .title-para {
     font-family: "Raleway", sans-serif;
     text-align: center;
+    font-size: 20px;
+}
+
+/* scoreboard */
+.scoreboard {
+    height: 50px;
+    width: 650px;
+    margin: 0 auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.restart {
+    border: none;
+    background-color: white;
+    height: fit-content;
+    font-size: 20px; 
+}
+
+.restart:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
