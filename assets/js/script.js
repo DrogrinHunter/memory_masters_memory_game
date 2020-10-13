@@ -112,18 +112,24 @@ grid.addEventListener('click', function(event){
 
         if (firstGuess !== '' && secondGuess !== '') {
             if (firstGuess === secondGuess) {
-                match()
+                match();
+                resetGuesses();
+            } else {
+                resetGuesses();
             }
         }
         previousTarget = clicked;
     }
 })
 
+// resetting guess count after 2 selections
+const resetGuesses = () => {
+    firstGuess = ''
+    secondGuess = '' 
+    count = 0
 
-
-// if (count < 2) {
-//     count++;
-
-//     clicked.classList.add('selected');
-// };
-
+    let selected = document.querySelectorAll('.selected')
+    selected.forEach((card) => {
+        card.classList.remove('selected')
+    })
+}
