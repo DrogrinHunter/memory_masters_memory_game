@@ -75,4 +75,21 @@ gameGrid.forEach((item) => {
     grid.appendChild(card)
 })
 
+// event listener for when a card is selected 
+grid.addEventListener('click', function(event){ 
+    let clicked = event.target;
+    if (clicked.nodeName === 'SECTION') {
+        return
+    }
 
+    clicked.classList.add('selected')
+})
+
+// allowing only 2 cards to be selected at a time
+let count = 0;
+
+if (count < 2) {
+    count++;
+
+    clicked.classList.add('selected');
+}
