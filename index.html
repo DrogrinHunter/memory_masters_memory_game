@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
+<div id="playerPanel" class="d-none">
+    Memory Master's Memory Game
+    <form id="playerForm">
+        <label for="playerName">
+            <span class="enter-name">Enter Player Name:</span>
+        </label>
+        <input type="text" id="playerName" name="playerName" required />
+        <input type="submit" id="submit" value="Play!" onclick="restartGame()" />
+    </form>
+
+    <div id="currentScorePanel">Score: <span id="current-score">0</span></div>
+
+    <div id="scores"></div>
+</div>
+
+
     <div class="container">
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
