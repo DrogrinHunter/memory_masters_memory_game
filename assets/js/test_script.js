@@ -197,3 +197,51 @@ gameOver() {
     this.playerPanel.classList.toggle("d-none", false);
     this.gameFinished();
 }
+
+gameWin() {
+    this.currentScore();
+    this.updateScores();
+    this.gameFinished();
+}
+
+updateScores() {
+    let index = this.configuration.scores.findIndex((score) => score.currentPlayer === true);
+    if (index !== -1) {
+        this.configuration.scores[index].currentPlayer = false;
+    }
+
+    // adding new scores to the leaderboard
+    this.configuration.scores.push({
+        playerName = this.configuration.playerName,
+        flips: this.totalTurns,
+        totalTime: this.totalTime - this.timeLeft;
+        currentPlayer: true
+    });
+
+    // sorting the scores by comparing all scores together, the scores will also be positioned high to low
+    this.configuration.scores.sort((a, b) => {
+        if (a.flips < b.flips) {
+            return -1;
+        }
+
+        if (a.flips > b.flips) {
+            return 1;
+        }
+
+        if (a.totalTime < b.totalTime) {
+            return -1;
+        }
+
+        if (a.totalTime > b.totalTime) {
+            return 1;
+        }
+        return 0;
+    })
+
+    // removing the last player from the leaderboard if there is an overflow - it will also sort it to the top 10 scores
+    if (this.configuration.scores.length > maxTopScores) {
+        this.configuration.scores.pop();
+    }
+
+    localStorage.setItem(gameId, JSON.stringify(this.configuration))
+}
