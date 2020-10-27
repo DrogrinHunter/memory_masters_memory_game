@@ -130,3 +130,20 @@ onStartGameHandler(event) {
     this.configuration.playerName = event.target[0].value;
     this.startGame();
 }
+
+/** 
+ * renders the card element using the image name passed in as a parameter
+ * @param {string} imageName
+ */
+
+ renderCard(imageName) {
+        return `<div class="card">
+                    <div class="card-back all-cards">
+                        <img class="card-img" src="assets/images/card-back.jpg"  alt="Hidden card">
+                    </div> 
+                    <div class="card-picture all-cards">
+                        <img class="card-value card-img" src="assets/images/${imageName}" alt="Picture card">
+                    </div>
+                </div>`;
+}
+
