@@ -170,3 +170,12 @@ removeCards() {
     let cards = Array.from(document.getElementsByClassName("card"));
     cards.forEach((card) => remove());
 }
+
+startCountDown() {
+    return setInterval(() => {
+        this.timeLeft--;
+        this.timer.innerText = this.timeLeft;
+        if (this.timeLeft === 0)
+            timeLeft.gameOver(); // the game will end once the countdown reaches 0
+    }, 1000)
+}
