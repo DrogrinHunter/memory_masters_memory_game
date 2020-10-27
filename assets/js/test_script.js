@@ -165,3 +165,8 @@ appendCards() {
     });
     this.fullDeck = cards; 
 };
+
+removeCards() {
+    let cards = Array.from(document.getElementsByClassName("card"));
+    cards.forEach((card) => remove());
+}
