@@ -186,3 +186,14 @@ gameFinished() {
     this.showPlayerPanel();
 }
 
+currentScore() {
+    let currentScore = document.getElementById("current-score");
+    currentScore.innerText = this.totalTurns;
+}
+
+gameOver() {
+    this.renderScores();
+    this.boardPanel.classList.toggle("d-none", true);
+    this.playerPanel.classList.toggle("d-none", false);
+    this.gameFinished();
+}
