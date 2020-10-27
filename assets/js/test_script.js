@@ -82,3 +82,38 @@ showPlayerPanel() {
     this.playerPanel.classList.toggle("d-none", false);
     
 }
+
+showBoardPanel() {
+    this.playerPanel.classList.toggle("d-none", true);
+    this.boardPanel.classList.toggle("d-none", false);
+}
+
+// adding the scoreboard table to the scores container - if table already exists then it is removed and recreated 
+
+renderScores() {
+    let scoresContainer = document.getElementById("scores");
+    if (scoresContainer.firstElementChild) {
+        scoresContainer.firstElementChild.remove();
+    }
+    let table = document.createElement("table");
+    let header = table.createTHead();
+    let headers = header.insertRow(0);
+    headers.innerHTML = `<th class="position">Position</th>
+                        <th class="player-name">Player Name</th>
+                        <th class="flips">Total Turns</th>
+                        <th class="total-time">Total Time</th>`;
+    let tblBody = document.createElement('tbody');
+    this.configuration.scores.forEach((score, index) => {
+            let tr = document.createElement("tr");
+            tr.innerHTML = `<td class="position">${index + 1}</td> 
+                            <td class="player-name">${score.playerName}</td>
+                            <td class="flips">${score.flips}</td>
+                            <td class="total-time">${score.totalTime}</td>`;
+            if (score.currentPlayer) {
+                tr.classList.add('last-game');
+            }
+            tblBody.appendChild(tr);
+        });
+        table.appendChild(tblBody);
+        scoresContainer.appendChild(table);
+    }

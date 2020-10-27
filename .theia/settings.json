@@ -20,5 +20,12 @@
       "**/core.python*": true,
    },
 "emmet.extensionsPath": ".theia",
-"editor.autoSave": "on"
+"editor.autoSave": "on",
+"python.pythonPath": "/home/gitpod/.pyenv/shims/python",
+"typescript.tsserver.useSeparateSyntaxServer": true,
+"typescript.format.insertSpaceBeforeAndAfterBinaryOperators": true,
+"typescript.format.insertSpaceAfterTypeAssertion": false,
+"typescript.autoClosingTags": true,
+"typescript.tsc.autoDetect": "on",
+"typescript.check.npmIsInstalled": true
 }
