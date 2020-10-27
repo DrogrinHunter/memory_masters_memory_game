@@ -147,3 +147,21 @@ onStartGameHandler(event) {
                 </div>`;
 }
 
+// appending the cards to the gameboard 
+appendCards() {
+    // creating a new array by adding the cardDeck array to itself so it duplicates and the user can match the cards
+    const allCards = cardDeck.concat(cardDeck);
+
+    const addCard = document.getElementById("main-gameboard");
+    // insertAdjacentHTML - inserting the html from the renderCard function for each item in the concatenated allCards array
+    allCards.forEach((imageName) => addCard.insertAdjacentHTML("beforeend", this.renderCard(imageName)));
+
+    let cards = Array.from(document.getElementsByClassName("card"));
+    
+    cards.forEach((card) => {
+        card.addEventListener("click", () => {
+            this.turnCard(card);
+        });
+    });
+    this.fullDeck = cards; 
+};
