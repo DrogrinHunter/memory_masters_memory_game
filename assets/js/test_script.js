@@ -179,3 +179,10 @@ startCountDown() {
             timeLeft.gameOver(); // the game will end once the countdown reaches 0
     }, 1000)
 }
+
+gameFinished() {
+    clearInterval(this.countDown);
+    this.removeCards();
+    this.showPlayerPanel();
+}
+
