@@ -117,3 +117,16 @@ renderScores() {
         table.appendChild(tblBody);
         scoresContainer.appendChild(table);
     }
+
+/** 
+* event handler to handle the onsubmit event that the user clicks on from the "start game" button
+* @param {*} event DOM event
+*/
+
+onStartGameHandler(event) {
+    event.stopImmediatePropagation();
+    event.preventDefault();
+    //assigning the players name to the config object to start the game
+    this.configuration.playerName = event.target[0].value;
+    this.startGame();
+}
