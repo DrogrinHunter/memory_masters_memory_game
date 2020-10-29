@@ -276,11 +276,11 @@ hideCards() {
 
   checkFormatch() {
       if (this.checkCardType(card) === this.checkCardType(this.checkCardType)) {
-          this.cardMatcher(card, this.checkCard);
+        this.cardMatcher(card, this.checkCard);
       } else {
-          this.notAMatch(card, this.checkCard);
-          //clearing the cards that have been selected
-          this.checkCard = null;
+        this.notAMatch(card, this.checkCard);
+        //clearing the cards that have been selected
+        this.checkCard = null;
       }
   };
 
@@ -290,4 +290,17 @@ hideCards() {
    * 
    */
 
-   
+cardMatcher(card1, card2) {
+    //adding the cards to the matchedCards array to track the progress of the user
+    this.matchedCards.push(card1);
+    this.matchedCards.push(card2);
+    setTimeout(() => {
+        card1.classList.add("invisible");
+        card2.classList.add("invisible");
+    }, delayBeforeRemovingCards);
+    this.checkCard = null;
+    // ending the game when all of the cards have been matched
+    if (this.matchedCards.length === this.fullDeck.length) {
+        this.gameWin();
+    }
+}
