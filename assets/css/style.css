@@ -1,2 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Ranchers&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    font-family: "Ranchers", sans-serif;
+    font-size: 250%;
+    color: orange;
+    background-color: white;
+    display: block;
+    width: 100%;
+}
+
+.nav-link p {
+    font-family: "Raleway", sans-serif;
+    font-size: 200%;
+    color: black;
+}
+
+.nav-item {
+    color: yellow;
+    margin: 1% 5% 1% 5%;
+}
+
+/* body */
