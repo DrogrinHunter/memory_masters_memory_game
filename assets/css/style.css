@@ -26,3 +26,21 @@
 }
 
 /* body */
+body {
+    background-color: lime;
+    margin: 0;
+}
+
+/* leaderboard */
+#playerPanel {
+    display: block;
+    position: fixed;
+    padding: 5%;
+    text-align: center;
+    justify-content: center;
+    z-index: 1100; /* z index specifies the stack order, this ensures that the player panel is displayed in front of all other elements */
+    background-color: white;
+    font-family: "Raleway", sans-serif;
+    font-size: 350%;
+    color: magenta;
+}

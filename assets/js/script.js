@@ -17,13 +17,13 @@ const delayBeforeRemovingCards = 100;
 const maxTopScores = 10;
 const gameTime = 150; 
 
-class boardGame {
+class BoardGame {
     constructor(totalTime) {
         this.fullDeck = [];
         this.totalTurns = 0;
         this.totalTime = totalTime;
         this.timeLeft = totalTime;
-        this.turns - document.getElementById("turns");
+        this.turns = document.getElementById("turns");
         this.timer = document.getElementById("time-left");
         this.configuration = null;
         this.playerPanel = document.getElementById("playerPanel");
@@ -40,7 +40,7 @@ start() {
 
 addListeners() {
     let playerForm = document.getElementById("playerForm");
-    playerForm.addEventListener("submit", this.onStartGameHandler.on(this)); //returning function that will used later 
+    playerForm.addEventListener("submit", this.onStartGameHandler.bind(this)); //returning function that will used later 
 }
 
 // loading previous games played and user configuration from localStorage - if the configuration does not exist then a default one is created.
@@ -133,7 +133,7 @@ onStartGameHandler(event) {
 
 /** 
  * renders the card element using the image name passed in as a parameter
- * @param {string} imageName
+ * @param {String} imageName
  */
 
  renderCard(imageName) {
@@ -176,7 +176,7 @@ startCountDown() {
         this.timeLeft--;
         this.timer.innerText = this.timeLeft;
         if (this.timeLeft === 0)
-            timeLeft.gameOver(); // the game will end once the countdown reaches 0
+            time.gameOver(); // the game will end once the countdown reaches 0
     }, 1000)
 }
 
@@ -274,7 +274,7 @@ hideCards() {
   * @param {Element} card 
   */
 
-  checkFormatch() {
+  checkForMatch() {
       if (this.checkCardType(card) === this.checkCardType(this.checkCardType)) {
         this.cardMatcher(card, this.checkCard);
       } else {
@@ -314,7 +314,7 @@ notAMatch(card1, card2) {
     }, 500)
 }
 
-checkCardType() {
+checkCardType(card) {
     return card.getElementsByClassName("card-value")[0].src;
 }
 
@@ -325,7 +325,7 @@ checkCardType() {
 
  shuffleDeck() {
     for (let i = this.fullDeck.length -1; i >0; i--) {
-        let randomIndex = math.floor(Math.random() - (i +1));
+        let randomIndex = Math.floor(Math.random() - (i +1));
         this.fullDeck[randomIndex].style.order = i;
         this.fullDeck[1].style.order = randomIndex;
     }
@@ -336,5 +336,5 @@ checkCardType() {
  }
 }
 
-const game = new boardGame(gameTime);
+const game = new BoardGame(gameTime);
 game.start();
