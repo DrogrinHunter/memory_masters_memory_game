@@ -31,7 +31,7 @@ class boardGame {
         this.checkCard = null;
         this.addListeners();
     }
-}
+
 
 start() {
     this.loadConfiguration();
@@ -256,10 +256,10 @@ hideCards() {
  * @param {Element} card the card element
  */
 
- turnCard() {
+ turnCard(card) {
     if (this.isCardFacedDown(card)) {
         this.totalTurns++; //increasing the number of turns
-        this.turns.innerText this.totalTurns; //increasing the number of turns on screen
+        this.turns.innerText = this.totalTurns; //increasing the number of turns on screen
         card.classList.add("visible");
         if (this.checkCard) {
             this.checkFormatch(card);
@@ -331,4 +331,7 @@ checkCardType() {
     }
  }
 
- 
+ isCardFacedDown(card) {
+    return (!this.busy && !this.matchedCards.includes(card) && card !== this.checkCard)
+ }
+}
