@@ -214,7 +214,7 @@ updateScores() {
     this.configuration.scores.push({
         playerName = this.configuration.playerName,
         flips: this.totalTurns,
-        totalTime: this.totalTime - this.timeLeft;
+        totalTime: this.totalTime - this.timeLeft,
         currentPlayer: true
     });
 
@@ -245,3 +245,26 @@ updateScores() {
 
     localStorage.setItem(gameId, JSON.stringify(this.configuration))
 }
+
+hideCards() {
+    this.fullDeck.forEach((card) => {
+        card.classList.remove("visible");
+    })
+}
+
+/**
+ * @param {Element} card the card element
+ */
+
+ turnCard() {
+    if (this.isCardFacedDown(card)) {
+        this.totalTurns++; //increasing the number of turns
+        this.turns.innerText this.totalTurns; //increasing the number of turns on screen
+        card.classList.add("visible");
+        if (this.checkCard) {
+            this.checkFormatch(card);
+        } else {
+            this.checkCard = card;
+        }
+    }
+ }
