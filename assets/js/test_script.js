@@ -267,4 +267,27 @@ hideCards() {
             this.checkCard = card;
         }
     }
- }
+ };
+
+ /**
+  * checking to see if the 2nd selected card is a match for the 1st selected card
+  * @param {Element} card 
+  */
+
+  checkFormatch() {
+      if (this.checkCardType(card) === this.checkCardType(this.checkCardType)) {
+          this.cardMatcher(card, this.checkCard);
+      } else {
+          this.notAMatch(card, this.checkCard);
+          //clearing the cards that have been selected
+          this.checkCard = null;
+      }
+  };
+
+  /**
+   * @param {*} card1 first card selected
+   * @param {*} card2 second card selected 
+   * 
+   */
+
+   
