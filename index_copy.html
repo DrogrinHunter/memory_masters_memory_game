@@ -30,12 +30,24 @@
         <input type="text" id="playerName" name="playerName" required />
         <input type="submit" id="submit" value="Play!" />
     </form>
+    <div id="currentScorePanel">Score: <span id="current-score">0</span></div>
+    <div id="scores"></div>
+
+</div>
+
+<div id="gameboard-container">
+    <div id="main-gameboard" class="game-board d-none">
+        <div class="game-info">
+            <div class="time-turns">Time <span id="time-left"></span></div>
+            <div class="time-turns">Turns <span id="turns">0</span></div>
+        </div>
+        <!-- InsertAdjacentHTML will insert the HTML for the playing cards -->
+    </div>
 
 
 
 
 
-    
 </div>
     <script src="assets/js/test_script.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
