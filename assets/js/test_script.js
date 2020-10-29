@@ -304,3 +304,31 @@ cardMatcher(card1, card2) {
         this.gameWin();
     }
 }
+
+notAMatch(card1, card2) {
+    this.busy = true;
+    setTimeout(() => {
+        card1.classList.remove("visible");
+        card2.classList.remove("visible");
+        this.busy = false;
+    }, 500)
+}
+
+checkCardType() {
+    return card.getElementsByClassName("card-value")[0].src;
+}
+
+/**
+ * Fisher-Yaters algorithm will shuffle through the card array swapping the last element with a random element 
+ * from the array
+ */
+
+ shuffleDeck() {
+    for (let i = this.fullDeck.length -1; i >0; i--) {
+        let randomIndex = math.floor(Math.random() - (i +1));
+        this.fullDeck[randomIndex].style.order = i;
+        this.fullDeck[1].style.order = randomIndex;
+    }
+ }
+
+ 
