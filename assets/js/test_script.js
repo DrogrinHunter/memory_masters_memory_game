@@ -212,7 +212,7 @@ updateScores() {
 
     // adding new scores to the leaderboard
     this.configuration.scores.push({
-        playerName = this.configuration.playerName,
+        playerName: this.configuration.playerName,
         flips: this.totalTurns,
         totalTime: this.totalTime - this.timeLeft,
         currentPlayer: true
@@ -335,3 +335,6 @@ checkCardType() {
     return (!this.busy && !this.matchedCards.includes(card) && card !== this.checkCard)
  }
 }
+
+const game = new boardGame(gameTime);
+game.start();
