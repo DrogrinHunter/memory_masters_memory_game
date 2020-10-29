@@ -10,40 +10,46 @@
 </head>
 <body>
 
+<!-- Header -->
+<header>
+    <nav class="navbar navbar-expand navbar-bg fixed-top"> 
+        <div class="nav">
+            <ul class="navbar-nav mr-auto">
+                <li>Memory Master's Memory Game</li>
+                <li class="nav-link" href="index_copy.html">PLAY</li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- leaderboard -->
 <div id="playerPanel" class="d-none">
-    Memory Master's Memory Game
+    <h1>Memory Master's memory Game</h1>
     <form id="playerForm">
-        <label for="playerName">
-            <span class="enter-name">Enter Player Name:</span>
-        </label>
+        <label for="playerName"><span class="enter-name">Enter Player Name:</span></label>
         <input type="text" id="playerName" name="playerName" required />
-        <input type="submit" id="submit" value="Play!" onclick="restartGame()" />
+        <input type="submit" id="submit" value="Play!" />
     </form>
-
     <div id="currentScorePanel">Score: <span id="current-score">0</span></div>
-
     <div id="scores"></div>
+
 </div>
 
-
-    <div class="container">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-            <h1 class="display-4 title-main">Memory Master's Memory Game</h1>
-            <p class="lead title-para">Find the matching pair of cards to win! </p>
-            </div>
-        </div>      
-    </div> 
-
-    <!-- scoreboard section -->
-    <div class="scoreboard">
-        <div class="moves title-para">0 Moves</div>
-        <div class="timer title-para">00:00</div>
-        <button type="button" class="restart title-para" onclick="restartGame()">Restart!</button>
+<div id="gameboard-container">
+    <div id="main-gameboard" class="game-board d-none">
+        <div class="game-info">
+            <div class="time-turns">Time <span id="time-left"></span></div>
+            <div class="time-turns">Turns <span id="turns">0</span></div>
+        </div>
+        <!-- InsertAdjacentHTML will insert the HTML for the playing cards -->
     </div>
-    <div id="game"></div>
 
-    
-    <script src="assets/js/test_script.js"></script>
+
+
+
+
+</div>
+    <script src="assets/js/script.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
