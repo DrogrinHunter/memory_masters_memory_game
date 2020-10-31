@@ -1,15 +1,14 @@
 // array with img source links to be retrieved and inserted into the HTML when cards get created 
 
 const cardDeck = [
-    "angular.svg",
     "aurelia.svg",
     "backbone.svg",
     "ember.svg",
     "react.svg",
     "vue.svg",
     "html.svg",
-    "css.svg",
-    "js-badge.svg"
+    //"css.svg",
+    //"js-badge.svg"
 ];
 
 const gameId = "board-game";
@@ -262,7 +261,7 @@ hideCards() {
         this.turns.innerText = this.totalTurns; //increasing the number of turns on screen
         card.classList.add("visible");
         if (this.checkCard) {
-            this.checkFormatch(card);
+            this.checkForMatch(card);
         } else {
             this.checkCard = card;
         }
@@ -274,8 +273,8 @@ hideCards() {
   * @param {Element} card 
   */
 
-  checkForMatch() {
-      if (this.checkCardType(card) === this.checkCardType(this.checkCardType)) {
+  checkForMatch(card) {
+      if (this.checkCardType(card) === this.checkCardType(this.checkCard)) {
         this.cardMatcher(card, this.checkCard);
       } else {
         this.notAMatch(card, this.checkCard);
@@ -325,7 +324,7 @@ checkCardType(card) {
 
  shuffleDeck() {
     for (let i = this.fullDeck.length -1; i >0; i--) {
-        let randomIndex = Math.floor(Math.random() - (i +1));
+        let randomIndex = Math.floor(Math.random() * (i + 1));
         this.fullDeck[randomIndex].style.order = i;
         this.fullDeck[1].style.order = randomIndex;
     }
