@@ -142,3 +142,29 @@ body {
     max-width: 100%;
     max-height: 100%;
 }
+
+/* leaderboard table */
+
+#scores {
+    color: orange;
+    border: 2px solid red;
+    width: 80%;
+    display: inline-block;
+    font-size: 35%;
+    margin-bottom: 12%;
+}
+
+#scores table {
+    width: 100%;
+    text-align: center;
+}
+
+#scores table th, td {
+    text-align: center;
+}
+
+#scores table tr.last-game {
+    color: black;
+    border: 2px solid red;
+}
+
