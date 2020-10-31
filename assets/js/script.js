@@ -139,7 +139,7 @@ onStartGameHandler(event) {
  renderCard(imageName) {
         return `<div class="card">
                     <div class="card-back all-cards">
-                        <img class="card-img" src="assets/images/card-back.jpg"  alt="Hidden card">
+                        <img class="card-img" src="assets/images/card_background.jpg"  alt="Hidden card">
                     </div> 
                     <div class="card-picture all-cards">
                         <img class="card-value card-img" src="assets/images/${imageName}" alt="Picture card">
