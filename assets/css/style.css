@@ -42,8 +42,10 @@ body {
     background-color: white;
     font-family: "Raleway", sans-serif;
     font-size: 350%;
-    color: magenta;
+    color: black;
 }
+
+
 
 #currentScorePanel {
     display: hidden;
@@ -72,4 +74,26 @@ body {
     font-family: "Raleway", sans-serif;
     font-size: 70%;
     margin-bottom: 2%
+}
+
+/* gameboard */
+
+.game-info {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    margin: 10%;
+    justify-content: center;
+    perspective: 500px;
+}
+
+.time-turns {
+    font-family: "Raleway", sans-serif;
+    color: black;
 }
