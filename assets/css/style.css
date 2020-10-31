@@ -97,3 +97,48 @@ body {
     font-family: "Raleway", sans-serif;
     color: black;
 }
+
+/* cards */
+
+.card {
+    position: relative;
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 300ms ease-in-out;
+}
+
+.card-back {
+    transform: rotateY(0);
+
+}
+
+.card-picture {
+    transform: rotateY(-180deg);
+}
+
+.card-visible .card-back {
+    transform: rotateY(180deg);
+}
+
+.card-visible .card-picture {
+    transform: rotateY(0);
+
+}
+
+.card-picture {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.card-img,
+.card-back {
+    max-width: 100%;
+    max-height: 100%;
+}
