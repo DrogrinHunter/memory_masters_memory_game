@@ -44,3 +44,32 @@ body {
     font-size: 350%;
     color: magenta;
 }
+
+#currentScorePanel {
+    display: hidden;
+    font-family: "Ranchers", sans-serif;
+    color: orange;
+    font-size: 80%;
+    padding: 1% 0 1% 0;
+}
+
+#playerName {
+    width: 30%;
+    margin-bottom: 3%;
+}
+
+#playerForm {
+    margin-bottom: 1%;
+
+}
+
+#playerForm label {
+    margin-bottom: 1%;
+}
+
+.enter-name {
+    color: black;
+    font-family: "Raleway", sans-serif;
+    font-size: 70%;
+    margin-bottom: 2%
+}
