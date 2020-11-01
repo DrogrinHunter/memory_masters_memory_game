@@ -110,20 +110,23 @@ body {
 
 .card-back {
     transform: rotateY(0);
-
+    -webkit-transform: rotateY(0);
+    backface-visibility: hidden;
 }
 
 .card-picture {
     transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
 }
 
-.card-visible .card-back {
+.card.visible .card-back {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 
-.card-visible .card-picture {
+.card.visible .card-picture {
     transform: rotateY(0);
-
+    -webkit-transform: rotateY(0);
 }
 
 .card-picture {
@@ -134,6 +137,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    backface-visibility: hidden;
     border-radius: 2px;
 }
 

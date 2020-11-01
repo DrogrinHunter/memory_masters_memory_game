@@ -167,7 +167,7 @@ appendCards() {
 
 removeCards() {
     let cards = Array.from(document.getElementsByClassName("card"));
-    cards.forEach((card) => remove());
+    cards.forEach((card) => card.remove());
 }
 
 startCountDown() {
