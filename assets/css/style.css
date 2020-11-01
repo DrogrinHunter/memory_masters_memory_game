@@ -45,8 +45,6 @@ body {
     color: black;
 }
 
-
-
 #currentScorePanel {
     display: hidden;
     font-family: "Ranchers", sans-serif;
@@ -86,11 +84,12 @@ body {
 
 .game-board {
     display: grid;
-    grid-template-columns: repeat(6, auto);
-    grid-gap: 10px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 20% 20% 20% ;
+    grid-gap: 1px;
     margin: 10%;
     justify-content: center;
-    perspective: 500px;
+    perspective: 400px;
 }
 
 .time-turns {
@@ -103,8 +102,8 @@ body {
 .card {
     position: relative;
     display: flex;
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 75%;
+    max-height: 75%;
     transition: transform 300ms ease-in-out;
 }
 

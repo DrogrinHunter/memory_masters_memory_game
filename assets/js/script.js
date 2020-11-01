@@ -7,8 +7,8 @@ const cardDeck = [
     "react.svg",
     "vue.svg",
     "html.svg",
-    //"css.svg",
-    //"js-badge.svg"
+    "css.svg",
+    "js-badge.svg"
 ];
 
 const gameId = "board-game";
