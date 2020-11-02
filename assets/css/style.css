@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+.headline {
+    font-family: "Ranchers", sans-serif;
+    text-transform: uppercase;
+    font-size: 100%;
+}
 /* Navbar */
 .navbar {
     font-family: "Ranchers", sans-serif;
@@ -20,10 +25,38 @@
     color: black;
 }
 
+#navbar-header {
+    font-family: "Ranchers", sans-serif;
+    font-size: 40px;
+    color: black;
+
+}
+
+.header-link {
+    font-family: "Raleway", sans-serif;
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.header-link:hover {
+    text-decoration: underline;
+    text-decoration-color: orange;
+    color: orange;
+}
+
+
 .nav-item {
     color: yellow;
     margin: 1% 5% 1% 5%;
 }
+
+.navbar-expand .navbar-nav .nav-link {
+    padding-right: .5rem;
+    padding-left: 20px;
+}
+
 
 /* body */
 body {
@@ -47,8 +80,8 @@ body {
 
 #currentScorePanel {
     display: hidden;
-    font-family: "Ranchers", sans-serif;
-    color: orange;
+    font-family: "Raleway", sans-serif;
+    color: red;
     font-size: 80%;
     padding: 1% 0 1% 0;
 }
@@ -63,9 +96,14 @@ body {
 
 }
 
+#playerForm input {
+    font-size: 50px;
+}
+
 #playerForm label {
     margin-bottom: 1%;
 }
+
 
 .enter-name {
     color: black;
@@ -84,8 +122,8 @@ body {
 
 .game-board {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 20% 20% 20% ;
+    grid-template-columns: 15% 15% 15% 15%;
+    grid-template-rows: auto;
     grid-gap: 1px;
     margin: 10%;
     justify-content: center;
@@ -149,12 +187,13 @@ body {
 /* leaderboard table */
 
 #scores {
-    color: orange;
-    border: 2px solid red;
+    color: black;
+    border: 2px solid orange;
     width: 80%;
     display: inline-block;
     font-size: 35%;
     margin-bottom: 12%;
+    margin-left: 5%;
 }
 
 #scores table {
@@ -168,6 +207,6 @@ body {
 
 #scores table tr.last-game {
     color: black;
-    border: 2px solid red;
+    border: 2px solid gray;
 }
 
