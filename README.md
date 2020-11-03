@@ -63,3 +63,43 @@ The main faces of the cards are only visible once the card is selected.
 <br><br>
 <img src="assets/images/readme/how_to_play.png">
 
+## Future Features
+**Multiplayer** - I would like to add the ability for multiple players locally at the same, allowing for more enjoyment from the users.
+
+**Online Multiplayer** - I would like to add the ability for users to play alongside their friends at the same time wherever they are in the world. 
+
+**Difficulty** - I would like to add the option of having harder levels so once they have finished the game the game would move to another level which increases in difficulty and only go back to the leaderboard once the time on the particular level has expired.
+
+## Technologies 
+In this game, I have used the following languages and frameworks: 
+
+*HTML* - this project uses HTML for structure. 
+*CSS* - this project uses CSS for styling.
+*Javascript* - this project mainly uses Javascript to create and control dynamic content in the game.
+*Google Fonts* - this project uses [Google Fonts]("https://fonts.google.com") to style the fonts in this game.
+*Bootstrap* - this project uses [Bootstrap]("https://getbootstrap.com") to improve navigation around the game. 
+*Balsamiq* - Balsamiq has been used to create the wireframes used in this project. 
+
+<br><br>
+
+## Surface
+### Game Design
+The game has been designed to be as simple and minimalist as possible. It is my opinion that having a simple design for the game would improve the user's experience as they would not get distracted on 
+other aspects that are on the page and distrupting their gameplay. 
+
+The white background has been used as it looks clean and the colors used (black, red and orange) are used to highlight the areas that the user needs to look at. The back of the playing cards have a similar 
+design to actual playing cards that the user might have around the house which helps the user to become familar with the game as the design is something that they might be used too. 
+
+The card faces have images that relate to web development, such as JS, CSS and HTML - this has been done deliberately as the game now has a multi purpose,  it poses as a generic memory game for normal users but for 
+those who are in the web development industry it is something that they are used to and is fun and friendly as they use those languages / frameworks on a regular basis.
+
+## Testing
+The testing that has been undertaken and results are listed below: 
+* Testing the input form to ensure that the user has to input their name before the game can carry on
+    * If you do not input a name then the form input box will pop up to advised that it is a required element. 
+* Ensuring that the leaderboard only allows 10 scores
+    * I played the game 12 times to ensure that the top 10 scores are listed.
+* Ensuring that cards disappear once matched
+    * I played the game and when the 2 cards matched, they disappeared which backed up the hypothesis.
+* Ensuring that the "Turns" counter increased by 1 every time a card was clicked
+    * I clicked on the same card multiple times to ensure that the counter increased by one - I tested this on different cards refreshing the
