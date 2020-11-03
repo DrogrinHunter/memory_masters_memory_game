@@ -34,9 +34,9 @@ share with theirs friends and families.
 ## Structure and Skeleton
 ### Wireframes
 * You can view the Wireframes [here](wireframes/mmmg.pdf)
-<img src="assets/wireframes/leaderboard2.png">
-<img src="assets/wireframes/gameboard.png">
-<img src="assets/wireframes/how-to-play.png>
+<img src="wireframes/leaderboard2.png">
+<img src="wireframes/gameboard.png">
+<img src="wireframes/how-to-play.png>
 
 ### How To Play
 1. Open the [Memory Master's Memory Game](https://drogrinhunter.github.io/memory_masters_memory_game/).
