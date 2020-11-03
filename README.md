@@ -102,4 +102,31 @@ The testing that has been undertaken and results are listed below:
 * Ensuring that cards disappear once matched
     * I played the game and when the 2 cards matched, they disappeared which backed up the hypothesis.
 * Ensuring that the "Turns" counter increased by 1 every time a card was clicked
-    * I clicked on the same card multiple times to ensure that the counter increased by one - I tested this on different cards refreshing the
+    * I clicked on the same card multiple times to ensure that the counter increased by one - I tested this on different cards refreshing the page after each time.
+
+### Bugs
+Throughout this project, there has been bugs that have been fixed. Some of the bugs and resolutions are listed below: 
+* When adding new scores, the JS function is not working.
+    * In the array that pushes the score to the leaderboard, there was an ";" instead of ",".
+* The cards were not flipping 
+    * In the turnCard function, I missed a "=" in the if statement.
+* The cards were not shuffling when the game was refreshed.
+    * in the shuffleCards function, where you use the Math.random function, the "m" was not capitalised. 
+* The card back would not disappear when clicked.
+    * I added backface-visibility to the CSS class `card-back` as well as `card-picture`. 
+
+#### Remaining Bugs 
+* When the timer counts down to 0 the game does not stop, it continues to count down. 
+
+## Project Credits & Acknowledgements
+* All images have been obtained from [SVG Repo]("https://www.svgrepo.com/") which is a website that you can get copyright free images.
+* The key concepts of HTML, CSS and JS have been learnt from the Code Institue course materials and read further materials from [Mozilla Developer Network]("https://developer.mozilla.org/en-US/docs/Web/JavaScript") and [Eloquent Javascript]("https://eloquentjavascript.net").
+* [Fisher-Yates Shuffle Algorithm]("https://bost.ocks.org/mike/shuffle/") - this was used to shuffle the cards.
+* [Countdown Timer]("https://www.w3schools.com/js/js_timing.asp")
+* [Grid layout and properties]("https://www.w3schools.com/css/css_grid.asp")
+* [Extra Javascript Information]("https://www.freecodecamp.org/news/learn-javascript-full-course/") - I used Free Code Camp JS tutorials for certain functions.
+
+I used other resources from [StackOverflow]("https://StackOverflow.com") and [W3Schools]("https://w3schools.com") for troubleshooting issues during the project as well as support from my mentor.
+
+<br><br><br><br>
+[Back To The Top](#about-the-game)
