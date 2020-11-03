@@ -1,5 +1,6 @@
 # <p align="center">[Memory Master's Memory Game](https://drogrinhunter.github.io/test_memory_game/)</p>
 <img src="assets/images/readme/mmmg.png">
+
 # About The Game
 Memory Master's Memory Game is a card matching game for those looking to improve their memory skills.
 Players will race against the countdown timer to beat the game whilst keeping a track of their scores which will show the user how well their
