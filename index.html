@@ -14,11 +14,11 @@
 
 <!-- Header -->
 <header>
-    <nav class="navbar navbar-expand navbar-bg fixed-top"> 
+    <nav class="navbar navbar-expand navbar-bg fixed-top d-none" id="navBar"> 
         <div class="nav">
             <ul class="navbar-nav mr-auto">
                 <li id="navbar-header">Memory Master's Memory Game</li>
-                <li> <a class="header-link" href="index.html">PLAY</a></li>
+                <li> <a class="header-link" href="index.html">LEADERBOARD</a></li>
                 <li><a class="header-link" href="#how-to">HOW TO PLAY</a></li>
             </ul>
         </div>
@@ -26,7 +26,7 @@
 </header>
 
 <!-- leaderboard -->
-<div id="playerPanel" class="d-none">
+<div id="playerPanel">
     <h1 class="headline">Memory Master's Memory Game</h1>
     <form id="playerForm">
         <label for="playerName"><span class="enter-name">Enter Player Name:</span></label>
@@ -38,8 +38,8 @@
 
 </div>
 
-<div id="gameboard-container">
-    <div id="main-gameboard" class="game-board d-none">
+<div id="gameboard-container" class="d-none">
+    <div id="main-gameboard" class="game-board">
         <div class="game-info">
             <div class="time-turns">Time <span id="time-left"></span></div>
             <div class="time-turns">Turns <span id="turns">0</span></div>

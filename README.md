@@ -11,6 +11,10 @@ share with theirs friends and families.
 
 <br>
 
+This game has been built for desktop use or devices with good resolution. 
+
+<br>
+
 ## UX 
 ## Strategy and Scope
 
@@ -118,9 +122,8 @@ Throughout this project, there has been bugs that have been fixed. Some of the b
     * in the shuffleCards function, where you use the Math.random function, the "m" was not capitalised. 
 * The card back would not disappear when clicked.
     * I added backface-visibility to the CSS class `card-back` as well as `card-picture`. 
-
-#### Remaining Bugs 
-* When the timer counts down to 0 the game does not stop, it continues to count down. 
+* The time countdown when it reaches 0 did not stop the game.
+    * In the JS code, where I added the startCountDown function, I had a typo where it said "time.gameOver()" instead of "this.gameOver()"
 
 ## Project Credits & Acknowledgements
 * All images have been obtained from [SVG Repo]("https://www.svgrepo.com/") which is a website that you can get copyright free images.
