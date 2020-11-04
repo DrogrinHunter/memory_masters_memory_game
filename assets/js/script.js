@@ -294,7 +294,7 @@ class BoardGame {
     }
 
     /**
-     * Pushes any new scores to the leaderboard 
+     * Pushes any new scores to the leaderboard
      */
     this.configuration.scores.push({
       playerName: this.configuration.playerName,
@@ -409,8 +409,8 @@ class BoardGame {
   }
 
   /**
-   * 
-   * @param {*} card to check the type of card that has been selected 
+   *
+   * @param {*} card to check the type of card that has been selected
    */
   checkCardType(card) {
     return card.getElementsByClassName("card-value")[0].src;
@@ -430,7 +430,7 @@ class BoardGame {
 
   /**
    * Helper function to check whether the card is faced down or not
-   * @param {*} card to check whether the card is faced down or whether the card image is visible 
+   * @param {*} card to check whether the card is faced down or whether the card image is visible
    */
   isCardFacedDown(card) {
     return (

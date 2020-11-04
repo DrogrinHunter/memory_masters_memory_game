@@ -125,6 +125,30 @@ Throughout this project, there has been bugs that have been fixed. Some of the b
 * The time countdown when it reaches 0 did not stop the game.
     * In the JS code, where I added the startCountDown function, I had a typo where it said "time.gameOver()" instead of "this.gameOver()"
 
+## Deployment
+This project has been developed in GitPod IDE, committed to git and pushed to GitHub. The Master Branch is the only branch used for development in this project.
+
+The following steps were taken to deploy Memory Master's Memory Game to GitHub pages from the GitHub repository: 
+
+* Log into GitHub.
+* Select DrogrinHuinter/memory_masters_memory_game from the list of repositories.
+* From the repository menu, click "Settings".
+* Scroll down to the "GitHub Pages" section (the page will automatically open "Options" after opening the "Settings").
+* Under "Source", select "Master Branch" from the drop-down menu.
+* This will update the page and then deploy the website.
+* Once the page has refreshed, scroll back down to "GitHub Pages" section and there will be a URL for you to distribute to others - https://drogrinhunter.github.io/memory_masters_memory_game/ <br>
+
+#### Cloning The Repository
+To clone Memory Master's Memory Game, follow the below steps:
+* Go to the repository via [this link]("https://github.com/DrogrinHunter/memory_masters_memory_game.git").
+* Click on the green "Code" button under the repository name.
+* Copy the clone URL.
+* Open the IDE of your choice.
+* Open the terminal and change the current working directory to the location where you want to store the cloned directory.
+* Using `git clone`, paste the URL from the repository you want to clone and click "enter" or "return".
+This will create a local clone of the project. <br>
+
+
 ## Project Credits & Acknowledgements
 * All images have been obtained from [SVG Repo]("https://www.svgrepo.com/") which is a website that you can get copyright free images.
 * The key concepts of HTML, CSS and JS have been learnt from the Code Institue course materials and read further materials from [Mozilla Developer Network]("https://developer.mozilla.org/en-US/docs/Web/JavaScript") and [Eloquent Javascript]("https://eloquentjavascript.net").
@@ -132,6 +156,7 @@ Throughout this project, there has been bugs that have been fixed. Some of the b
 * [Countdown Timer]("https://www.w3schools.com/js/js_timing.asp")
 * [Grid layout and properties]("https://www.w3schools.com/css/css_grid.asp")
 * [Extra Javascript Information]("https://www.freecodecamp.org/news/learn-javascript-full-course/") - I used Free Code Camp JS tutorials for certain functions.
+* [GitHub Cloning]("https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository")
 
 I used other resources from [StackOverflow]("https://StackOverflow.com") and [W3Schools]("https://w3schools.com") for troubleshooting issues during the project as well as support from my mentor.
 
