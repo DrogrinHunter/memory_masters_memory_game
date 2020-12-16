@@ -1,4 +1,4 @@
-# <p align="center">[Memory Master's Memory Game](https://drogrinhunter.github.io/test_memory_game/)</p>
+# <p align="center">[Memory Master's Memory Game](https://github.com/DrogrinHunter/memory_masters_memory_game)</p>
 <img src="assets/images/readme/mmmg.png">
 
 # About The Game
