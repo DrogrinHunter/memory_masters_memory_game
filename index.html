@@ -12,17 +12,40 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="#"> 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="#" />
   </head>
   <body>
     <!-- Header -->
     <header>
+      <!-- desktop navigation -->
       <nav class="navbar navbar-expand navbar-bg fixed-top d-none" id="navBar">
-        <div class="nav">
+        <div class="nav" id="desktop-nav">
           <ul class="navbar-nav mr-auto">
             <li id="navbar-header">Memory Master's Memory Game</li>
             <li><a class="header-link" href="index.html">LEADERBOARD</a></li>
             <li><a class="header-link" href="#how-to">HOW TO PLAY</a></li>
+          </ul>
+        </div>
+
+        <!-- mobile navigation -->
+        <!-- the user will see icons instead of text to save space and to allow the ability to keep the UI simple -->
+        <div id="mobile-nav" class="mobile-nav">
+          <ul class="navbar-nav mr-auto">
+            <li id="logo-mobile">Memory Master's Memory Game</li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"
+                ><i class="fas fa-gamepad" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#how-to"
+                ><i class="fas fa-info" aria-hidden="true"></i
+              ></a>
+            </li>
           </ul>
         </div>
       </nav>

@@ -55,6 +55,27 @@
   padding-left: 20px;
 }
 
+.mobile-nav {
+  font-family: "Ranchers", sans-serif;
+  font-size: 60%;
+  color: black;
+}
+
+#logo-mobile {
+  font-family: "Ranchers", sans-serif;
+  font-size: 60%;
+  color: black;
+}
+
+.mobile-nav i {
+  font-size: 200%;
+  color: orange;
+}
+
+#mobile-nav {
+  display: none;
+}
+
 /* body */
 body {
   background-color: lime;
@@ -228,4 +249,55 @@ td {
   text-transform: uppercase;
   font-size: 40px;
   font-family: "Raleway", sans-serif;
+}
+
+/* screen queries */
+@media only screen and (max-width: 950px) {
+  /* Nav Menu */
+  #desktop-nav {
+    display: none;
+  }
+
+  #mobile-nav {
+    display: block;
+    max-height: 50px;
+    padding: 0;
+  }
+
+  .nav-item {
+    font-size: 100%;
+  }
+
+  /* Starting the game */
+
+  #playerPanel {
+    display: block;
+    position: fixed;
+    width: 100%;
+    padding: 50% 2% 0 0;
+    font-size: 100%;
+    height: 100%;
+  }
+  /* Scoreboard */
+  #scores {
+    width: 95%;
+    font-size: 70%;
+    padding: 0;
+  }
+
+  /* Gameboard */
+  .game-board {
+    grid-gap: 9.5%;
+    margin: 25% 0 25% 0;
+    padding: 2%;
+  }
+
+  .time-turns {
+    padding: 1%;
+  }
+
+  /* How To Play */
+  #how-to {
+    padding-top: 15%;
+  }
 }
