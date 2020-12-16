@@ -258,6 +258,10 @@ td {
     display: none;
   }
 
+  .headline {
+    font-size: 50px;
+  }
+
   #mobile-nav {
     display: block;
     max-height: 50px;
