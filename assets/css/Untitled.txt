@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&family=Ranchers&display=swap");
-
+​
 * {
   box-sizing: border-box;
 }
-
+​
 .headline {
   font-family: "Ranchers", sans-serif;
   text-transform: uppercase;
@@ -18,19 +18,19 @@
   display: block;
   width: 100%;
 }
-
+​
 .nav-link p {
   font-family: "Raleway", sans-serif;
   font-size: 200%;
   color: black;
 }
-
+​
 #navbar-header {
   font-family: "Ranchers", sans-serif;
   font-size: 40px;
   color: black;
 }
-
+​
 .header-link {
   font-family: "Raleway", sans-serif;
   font-size: 30px;
@@ -38,50 +38,50 @@
   text-decoration: none;
   margin-left: 10px;
 }
-
+​
 .header-link:hover {
   text-decoration: underline;
   text-decoration-color: orange;
   color: orange;
 }
-
+​
 .nav-item {
   color: yellow;
   margin: 1% 5% 1% 5%;
 }
-
+​
 .navbar-expand .navbar-nav .nav-link {
   padding-right: 0.5rem;
   padding-left: 20px;
 }
-
+​
 .mobile-nav {
   font-family: "Ranchers", sans-serif;
   font-size: 60%;
   color: black;
 }
-
+​
 #logo-mobile {
   font-family: "Ranchers", sans-serif;
   font-size: 60%;
   color: black;
 }
-
+​
 .mobile-nav i {
   font-size: 200%;
   color: orange;
 }
-
+​
 #mobile-nav {
   display: none;
 }
-
+​
 /* body */
 body {
   background-color: lime;
   margin: 0;
 }
-
+​
 /* leaderboard */
 #playerPanel {
   display: block;
@@ -94,7 +94,7 @@ body {
   font-size: 350%;
   color: black;
 }
-
+​
 #currentScorePanel {
   display: hidden;
   font-family: "Raleway", sans-serif;
@@ -102,105 +102,113 @@ body {
   font-size: 80%;
   padding: 1% 0 1% 0;
 }
-
+​
 #playerName {
-  width: 30%;
-  margin-bottom: 3%;
+  /* width: 30%;
+  margin-bottom: 3%; */
 }
-
+​
 #playerForm {
-  margin-bottom: 1%;
+  /* margin-bottom: 1%; */
 }
-
+​
 #playerForm input {
-    font-size: 50%;
+  font-size: 2.5rem;
 }
-
+​
 #playerForm label {
-  margin-bottom: 1%;
+  /* margin-bottom: 1%; */
 }
-
+​
+#playerForm button {
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  height: 5rem;
+  font-size: 2.5rem;
+}
+​
 .enter-name {
   color: black;
   font-family: "Raleway", sans-serif;
   font-size: 70%;
   margin-bottom: 2%;
 }
-
+​
 /* gameboard */
-
+​
 .game-info {
   grid-column: 1 / -1;
   display: flex;
   justify-content: space-between;
 }
-
+​
 .game-board {
   display: grid;
-  grid-template-columns: 15% 15% 15% 15%;
+  grid-template-columns: 22% 22% 22% 22%;
   grid-template-rows: auto;
-  grid-gap: 1px;
-  margin-top: 100px;
   justify-content: center;
   perspective: 400px;
 }
-
+​
 .time-turns {
   font-family: "Raleway", sans-serif;
   color: black;
 }
-
+​
 /* cards */
-
+​
 .card {
   position: relative;
   display: flex;
-  max-width: 75%;
-  max-height: 75%;
   transition: transform 300ms ease-in-out;
+  margin: 10%;
+  padding: 5%;
 }
-
+​
 .card-back {
   transform: rotateY(0);
   -webkit-transform: rotateY(0);
   backface-visibility: hidden;
 }
-
+​
 .card-picture {
   transform: rotateY(-180deg);
   -webkit-transform: rotateY(-180deg);
 }
-
+​
 .card.visible .card-back {
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
 }
-
+​
 .card.visible .card-picture {
   transform: rotateY(0);
   -webkit-transform: rotateY(0);
 }
-
+​
 .card-picture {
   display: flex;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   backface-visibility: hidden;
   border-radius: 2px;
 }
-
+​
 .card-img,
 .card-back {
   max-width: 100%;
   max-height: 100%;
 }
-
+​
 /* leaderboard table */
-
+​
 #scores {
   color: black;
   border: 2px solid orange;
@@ -209,22 +217,22 @@ body {
   font-size: 35%;
   margin-bottom: 12%;
 }
-
+​
 #scores table {
   width: 100%;
   text-align: center;
 }
-
+​
 #scores table th,
 td {
   text-align: center;
 }
-
+​
 #scores table tr.last-game {
   color: black;
   border: 2px solid gray;
 }
-
+​
 /* how to play section */
 #how-to {
   display: block;
@@ -232,69 +240,92 @@ td {
   text-align: center;
   padding: 10%;
 }
-
+​
 #how-to h1 {
   font-family: "Ranchers", sans-serif;
-  font-size: 60px;
+  font-size: 2.5rem;
   color: orange;
 }
-
+​
 .how-to-text {
   color: #676b68;
   font-size: 30px;
   font-family: "Raleway", sans-serif;
 }
-
+​
 #how-to-quest {
   text-transform: uppercase;
   font-size: 40px;
   font-family: "Raleway", sans-serif;
 }
-
+​
+#gameboard-container {
+  margin-top:40px;
+}
+​
 /* screen queries */
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 768px) {
   /* Nav Menu */
   #desktop-nav {
     display: none;
   }
-
+​
   #mobile-nav {
     display: block;
     max-height: 50px;
     padding: 0;
   }
-
+​
   .nav-item {
     font-size: 100%;
   }
-
+​
   /* Starting the game */
-
+​
   #playerPanel {
     display: block;
+    /* position: fixed; */
     width: 100%;
+    /* padding: 50% 2% 0 0; */
     font-size: 100%;
-    height: 100%;
+    /* height: 100%; */
   }
-
+​
+  #playerForm input {
+    font-size: 1.9rem;
+    margin-bottom: 4px;
+  }
+​
+  #playerForm button {
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    height: 4rem;
+    font-size: 2.0rem;
+  }
+​
   /* Scoreboard */
   #scores {
     width: 95%;
     font-size: 70%;
     padding: 0;
   }
-
+​
   /* Gameboard */
-  .game-board {
-    grid-gap: 9.5%;
-    margin: 25% 0 25% 0;
-    padding: 2%;
+  .game-board { 
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    justify-content: center;
+    perspective: 400px;
   }
-
+​
   .time-turns {
     padding: 1%;
   }
-
+​
   /* How To Play */
   #how-to {
     padding-top: 15%;
