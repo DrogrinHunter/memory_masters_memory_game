@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Milestone 2">
-    <meta name="keywords" content="Code Intitute, CI, Web Development, HTML, CSS, JavaScript">
-    <meta name="author" content="Luke Willmmore">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memory Master's Memory Game</title>
-​
+
     <link rel="stylesheet" href="assets/css/style.css" />
     <link
       rel="stylesheet"
@@ -27,7 +22,7 @@
     <!-- Header -->
     <header>
       <!-- desktop navigation -->
-      <nav class="navbar navbar-expand navbar-bg d-none" id="navBar">
+      <nav class="navbar navbar-expand navbar-bg fixed-top d-none" id="navBar">
         <div class="nav" id="desktop-nav">
           <ul class="navbar-nav mr-auto">
             <li id="navbar-header">Memory Master's Memory Game</li>
@@ -35,7 +30,7 @@
             <li><a class="header-link" href="#how-to">HOW TO PLAY</a></li>
           </ul>
         </div>
-​
+
         <!-- mobile navigation -->
         <!-- the user will see icons instead of text to save space and to allow the ability to keep the UI simple -->
         <div id="mobile-nav" class="mobile-nav">
@@ -55,67 +50,45 @@
         </div>
       </nav>
     </header>
-​
+
     <!-- leaderboard -->
-    <div class="container-fluid">
-      <div class="row justify-content-md-center">
-        <div class="col">
-          <div id="playerPanel">
-            <h1 class="headline">Memory Master's Memory Game</h1>
-            <form id="playerForm" class="row-cols-lg-auto g-4 align-items-center">
-              <div class="col-auto">
-                <label for="playerName">
-                  <span>Enter Player Name:</span>
-                </label>
-              </div>
-              <div class="col-auto">
-                <input type="text" class="form-control mb-3" id="playerName" name="playerName" placeholder="" required>
-              </div>
-              <div class="col-auto">
-                <button type="submit" id="submit" class="btn btn-primary mb-3">Play!</button>
-              </div>
-            </form>
-​
-​
-            <div id="currentScorePanel">Score: <span id="current-score">0</span></div>
-            <div id="scores"></div>
-          </div>
-​
+    <div id="playerPanel">
+      <h1 class="headline">Memory Master's Memory Game</h1>
+      <form id="playerForm">
+        <label for="playerName"
+          ><span class="enter-name">Enter Player Name:</span></label
+        >
+        <input type="text" id="playerName" name="playerName" required />
+        <input type="submit" id="submit" value="Play!" />
+      </form>
+      <div id="currentScorePanel">Score: <span id="current-score">0</span></div>
+      <div id="scores"></div>
+    </div>
+
+    <div id="gameboard-container" class="d-none">
+      <div id="main-gameboard" class="game-board">
+        <div class="game-info">
+          <div class="time-turns">Time <span id="time-left"></span></div>
+          <div class="time-turns">Turns <span id="turns">0</span></div>
         </div>
+        <!-- InsertAdjacentHTML will insert the HTML for the playing cards -->
       </div>
-​
-      <div class="row">
-        <div class="col">
-​
-          <div id="gameboard-container" class="d-none">
-            <div id="main-gameboard" class="game-board">
-              <div class="game-info">
-                <div class="time-turns">Time <span id="time-left"></span></div>
-                <div class="time-turns">Turns <span id="turns">0</span></div>
-              </div>
-              <!-- InsertAdjacentHTML will insert the HTML for the playing cards -->
-            </div>
-​
-            <!-- how to play section - about -->
-            <div id="how-to">
-              <h1>How To Play Memory Master's Memory Game!</h1>
-              <p class="how-to-text">
-                Match 2 cards to win!
-                <br />
-                <br />
-                Match all of the cards within the quickest time to get on top of the
-                leaderboard!
-                <br />
-                <br />
-                Can <span id="how-to-quest">you</span> beat your friends?
-              </p>
-            </div>
-​
-          </div>
-        </div>
+
+      <!-- how to play section - about -->
+      <div id="how-to">
+        <h1>How To Play Memory Master's Memory Game!</h1>
+        <p class="how-to-text">
+          Match 2 cards to win!
+          <br />
+          <br />
+          Match all of the cards within the quickest time to get on top of the
+          leaderboard!
+          <br />
+          <br />
+          Can <span id="how-to-quest">you</span> beat your friends?
+        </p>
       </div>
     </div>
-​
     <script src="assets/js/script.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

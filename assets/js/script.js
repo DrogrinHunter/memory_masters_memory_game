@@ -163,7 +163,7 @@ class BoardGame {
     let tblBody = document.createElement("tbody");
     this.configuration.scores.forEach((score, index) => {
       let tr = document.createElement("tr");
-      tr.innerHTML = `<td class="position">${index + 1}</td> 
+      tr.innerHTML = `<td class="position">${index + 1}</td>
                             <td class="player-name">${score.playerName}</td>
                             <td class="flips">${score.flips}</td>
                             <td class="total-time">${score.totalTime}</td>`;
@@ -196,7 +196,7 @@ class BoardGame {
     return `<div class="card">
                     <div class="card-back all-cards">
                         <img class="card-img" src="assets/images/card_background.jpg"  alt="Hidden card">
-                    </div> 
+                    </div>
                     <div class="card-picture all-cards">
                         <img class="card-value card-img" src="assets/images/${imageName}" alt="Picture card">
                     </div>
@@ -279,8 +279,32 @@ class BoardGame {
   gameWin() {
     this.currentScore();
     this.updateScores();
-    this.gameFinished();
+    this.modalPopUp();
+    //this.gameFinished();
   }
+
+ /**
+ * Function that pops up a modal once the game has finished
+ */
+
+ let modal = document.getElementById("gameOverModal");
+ let btn = document.getElementById("modal-button");
+ let span = document.getElementsByClassName("close")[0];
+
+ modalPopUp() {
+   modal.style.display = "block";
+   span.onclick = function() {
+     modal.style.display = "none";
+   }
+   window.onclick = function(event) {
+     if (event.target == modal) {
+       modal.style.display = none
+     }
+   }
+   btn.onclick = this.gameFinished();
+ }
+
+
 
   /**
    * This function updates the leaderboard with the scores from the games that are played.
