@@ -283,28 +283,26 @@ class BoardGame {
     //this.gameFinished();
   }
 
- /**
- * Function that pops up a modal once the game has finished
- */
+  /**
+   * Function that pops up a modal once the game has finished
+   */
 
- let modal = document.getElementById("gameOverModal");
- let btn = document.getElementById("modal-button");
- let span = document.getElementsByClassName("close")[0];
+  modalPopUp() {
+    let modal = document.getElementById("gameOverModal");
+    let btn = document.getElementById("modal-button");
+    let span = document.getElementsByClassName("close")[0];
 
- modalPopUp() {
-   modal.style.display = "block";
-   span.onclick = function() {
-     modal.style.display = "none";
-   }
-   window.onclick = function(event) {
-     if (event.target == modal) {
-       modal.style.display = none
-     }
-   }
-   btn.onclick = this.gameFinished();
- }
-
-
+    modal.style.display = "block";
+    span.onclick = function () {
+      modal.style.display = "none";
+    };
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = none;
+      }
+    };
+    btn.onclick = this.gameFinished();
+  }
 
   /**
    * This function updates the leaderboard with the scores from the games that are played.
