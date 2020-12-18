@@ -101,6 +101,13 @@ body {
   color: black;
 }
 
+#playerPanel h1 {
+  font-family: "Ranchers", sans-serif;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+
+}
+
 ​ #currentScorePanel {
   display: hidden;
   font-family: "Raleway", sans-serif;
@@ -355,12 +362,32 @@ td {
   ​
 
   /* Scoreboard */
-  #scores {
-    width: 95%;
-    font-size: 70%;
-    padding: 0;
+
+#scores {
+  color: black;
+  border: 2px solid orange;
+  width: 95%;/* new */ 
+  display: inline-block;
+  font-size: 70%;/* new */ 
+  margin-bottom: 12%;
+  padding: 0; /* new */ 
+}
+
+  
+  #scores table {
+    width: 100%;
+    text-align: center;
   }
 
+  #scores table th,
+  td {
+    text-align: center;
+  }
+
+  #scores table tr.last-game {
+    color: black;
+    border: 2px solid gray;
+  }
   ​
 
   /* Gameboard */
