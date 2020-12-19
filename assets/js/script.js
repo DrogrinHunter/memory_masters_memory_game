@@ -226,9 +226,15 @@ class BoardGame {
 	 */
 	gameFinished() {
 		clearInterval(this.countDown);
-		this.removeCards();
-		this.showPlayerPanel();
-	}
+        this.removeCards();
+        this.modal();
+		// this.showPlayerPanel();
+    }
+    
+    modal() {
+        $('#gameOverModal').modal('show');
+    }
+
 	/**
 	 * Function that displays the user's score on the leaderboard.
 	 */
