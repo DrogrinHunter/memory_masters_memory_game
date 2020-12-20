@@ -103,15 +103,14 @@ those who are in the web development industry it is something that they are used
 
 ## Testing
 The testing that has been undertaken and results are listed below: 
-* Testing the input form to ensure that the user has to input their name before the game can carry on
-    * If you do not input a name then the form input box will pop up to advised that it is a required element. 
-* Ensuring that the leaderboard only allows 10 scores
-    * I played the game 12 times to ensure that the top 10 scores are listed.
-* Ensuring that cards disappear once matched
-    * I played the game and when the 2 cards matched, they disappeared which backed up the hypothesis.
+* Ensuring that the input form, at the beginning of the game, forces the player to put their name into the form before the game will continue. 
+    * This has been tested in many different ways - one of the ways that this has been tested is by clicking the "Play!" button, when the player does this then a small reminder pops up to advise the player that they need to input their name.
+* Ensuring that the leaderboard only holds the top 10 scores. 
+    * I have tested this function by playing the game 12 times in one sitting to ensure that only the top 10 scores are shown. I made a note from all of the games that were played of their final times and total turns to make sure that it was only the top 10 scores that got shown.
+* Ensuring that the cards disappeared once they were paired together 
+    * I tested this by again playing the game, making sure that the cards that I clicked were matching pairs and from there making sure that they disappeared once paired together. 
 * Ensuring that the "Turns" counter increased by 1 every time a card was clicked
     * I clicked on the same card multiple times to ensure that the counter increased by one - I tested this on different cards refreshing the page after each time.
-
 ### Bugs
 Throughout this project, there has been bugs that have been fixed. Some of the bugs and resolutions are listed below: 
 * When adding new scores, the JS function is not working.
