@@ -108,7 +108,8 @@ class BoardGame {
 		}, 500);
 		this.hideCards();
 		this.timer.innerText = this.timeLeft;
-		this.turns.innerText = this.totalTurns;
+        this.turns.innerText = this.totalTurns;
+        this.onResizeWindow(); 
 		this.showBoardPanel();
 		this.appendCards();
 	}
@@ -191,9 +192,9 @@ class BoardGame {
 	 */
 	appendCards() {
 		// creating a new array by adding the cardDeck array to itself so it duplicates and the user can match the cards
-		const allCards = cardDeck.concat(cardDeck);
-		const addCard = document.getElementById("main-gameboard");
-		allCards.forEach((imageName) => addCard.insertAdjacentHTML("beforeend", this.renderCard(imageName)));
+        const allCards = cardDeck.concat(cardDeck);
+        allCards.forEach((imageName) => this.mainGameboard.insertAdjacentHTML("beforeend", this.renderCard(imageName)));
+		// allCards.forEach((imageName) => addCard.insertAdjacentHTML("beforeend", this.renderCard(imageName)));
 		let cards = Array.from(document.getElementsByClassName("card"));
 		cards.forEach((card) => {
 			card.addEventListener("click", () => {
@@ -224,11 +225,11 @@ class BoardGame {
 	/**
 	 * Function that carries out tasks once the game has been completed - it will remove all cards, clear the timer and show the leaderboard
 	 */
-	gameFinished() {
-		clearInterval(this.countDown);
-        this.removeCards();
+    gameFinished() {
+        clearInterval(this.countDown);
         this.modal();
-		// this.showPlayerPanel();
+        this.removeCards();
+        this.showPlayerPanel();
     }
     
     modal() {
